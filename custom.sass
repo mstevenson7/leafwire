@@ -1,0 +1,1076 @@
+@import "_colors"
+@import "_mixins"
+@import "_fonts"
+@import "_defaults"
+
+// Form styling
+form
+  &.main-form
+    input:not(.custom-file-input):focus ~ label, textarea:focus ~ label
+      color: $color-blue-medium
+    label
+      @include font-size(17.5px)
+      font-weight: 500
+      color: #25262a
+      display: table-header-group
+      transition: all .25s ease
+    h6
+      font-weight: 500
+      color: #25262a
+      @include font-size(17.5px)
+    .form-control
+      @include font-size(17.5px)
+      background: #f6f9fc
+      padding: 1rem 0.75rem
+      border-color: #f6f9fc
+      color: $color-main-dark
+      border-radius: 6px
+      font-weight: 600
+      display: table-row-group
+      margin-top: .5em
+      &:focus
+        border-color: #cfd6d8
+        background: $color-white
+    .custom-select-lg, input.large
+      margin-top: 0.5em
+      padding: 1rem 0.75rem
+      height: calc(2.875rem + 14px)
+      background: #f6f9fc url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgMTEgOCI+CiAgPHBvbHlnb24gZmlsbD0iIzM1Mzc0NCIgZmlsbC1ydWxlPSJldmVub2RkIiBwb2ludHM9IjIyNS41IDMwLjMzMyAyMjAgMjMgMjMxIDIzIiBvcGFjaXR5PSIuNTEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMjAgLTIzKSIvPgo8L3N2Zz4K") no-repeat right .75rem center
+      border-color: #f6f9fc
+    .form-control-file
+      position: relative
+      width: 100%
+      height: 100%
+      min-height: 6em
+      outline: none
+      visibility: hidden
+      cursor: pointer
+      font-weight: 700
+      color: #53586d
+      font-size: 1.1rem
+      &:before
+        content: attr(data-title)
+        position: absolute
+        top: 0.5em
+        left: 0
+        width: 100%
+        min-height: 6em
+        line-height: 2em
+        padding-top: 1.9em
+        opacity: 1
+        visibility: visible
+        text-align: center
+        border: 1px dashed #ccd4d9
+        -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)
+        overflow: hidden
+        background: #f4f7fb
+        border-radius: 6px
+        background-image: linear-gradient(158deg,#fbfcfe 1%,#f4f7fb)
+      &:hover:before
+        border: 1px dashed $color-blue-medium
+    button.btn
+      padding: 1.1rem 2.75rem
+      @include bp-small
+        width: 80%
+    .progress
+      max-width: 500px
+      margin: 0 auto 3.4em
+      border-radius: 100px
+      background: #e7ebef
+      margin-top: 0.9rem
+    .form-row>.col, .form-row>[class*=col-]
+      display: table
+      margin-bottom: 1.4rem !important
+    .custom-file-label
+      background: #f6f9fc
+      border-color: #f6f9fc
+      color: #898c99
+      border-radius: 6px
+    .custom-file-label::after
+      padding: 0.275rem .75rem
+      color: #fff
+      background-color: #96a2a8
+      border-left: 0
+      font-weight: 700
+.main-form p.small
+  @include bp-small
+    @include vertical-align
+.progress-bar
+  background-color: $color-blue-medium
+  border-radius: 100px
+.form-control
+  background: $color-off-white
+  font-weight: 500
+  border-color: #e7e7ed
+  &:focus
+    outline: none
+    box-shadow: none
+.form-check, .custom-control.custom-checkbox
+  color: #000
+  font-size: 16px
+  font-weight: 600
+  margin-bottom: 0.5rem
+.form-check-label, .custom-control-label
+  color: #353744
+.custom-select-lg, input.large
+  height: calc(2.875rem + 4px)
+  font-size: 17px
+  font-weight: 600
+  color: #95979e
+  background: #fcfcfd url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgMTEgOCI+CiAgPHBvbHlnb24gZmlsbD0iIzM1Mzc0NCIgZmlsbC1ydWxlPSJldmVub2RkIiBwb2ludHM9IjIyNS41IDMwLjMzMyAyMjAgMjMgMjMxIDIzIiBvcGFjaXR5PSIuNTEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMjAgLTIzKSIvPgo8L3N2Zz4K") no-repeat right .75rem center
+  border-color: #eaeaef
+  background-size: 8px 10px
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after, .custom-checkbox .custom-control-input:checked~.custom-control-label::before
+  background-color: $color-green-1
+  border-radius: 4px
+input.large
+  background: #fcfcfd
+  margin-bottom: 1rem !important
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder
+  color: #93949c !important
+  font-weight: 500
+input::-moz-placeholder, textarea::-moz-input-placeholder
+  color: #93949c !important
+  font-weight: 500
+input:-moz-placeholder, textarea:-moz-input-placeholder
+  color: #93949c !important
+  font-weight: 500
+input:-ms-input-placeholder, textarea:-ms-input-placeholder
+  color: #93949c !important
+  font-weight: 500
+// End form styling
+
+
+// Buttons
+.btn
+  // width: 100%
+  @include bp-max-small
+    width: 100%
+  background: $color-green-2
+  color: $color-white
+  font-weight: 700
+  font-size: 1.2rem
+  border-radius: 6px
+  padding: 0.55rem .75rem
+  @include bp-medium
+    padding: 0.85rem .75rem
+  border: 0
+  box-shadow: 0 4px 6px rgba(96, 129, 58, .09), 0 1px 3px rgba(0, 0, 0, 0.09)
+  transition: all .25s ease
+  @include bp-small
+    // width: auto
+  &.mb-3
+    @include bp-small
+      margin-bottom: 0 !important
+  &.clr-line
+    background: transparent
+    border: 1px solid $color-green-1
+    color: $color-green-1!important
+    box-shadow: none
+    &.gray
+      border: 1px solid #d3d4dc !important
+      color: #babbc3 !important
+    &.active
+      border: 1px solid $color-blue-medium !important
+      color: $color-blue-medium !important
+    &:hover
+      background: transparent
+  &:focus
+    outline: none
+    box-shadow: none
+a.btn:not(.clr-line), button.btn
+  &:hover
+    transform: translateY(-1px)
+    box-shadow: 0 18px 17px 0 rgba(23, 28, 33, 0.03)
+    background: lighten( $color-green-2, 3% )
+    color: #fff
+  &:active
+    color: darken( $color-white, 3% )
+    transform: translateY(1px)
+    background: darken( $color-green-2, 3% )
+.btn-primary
+  background: $color-green-2
+// End buttons
+
+
+// Navigation
+.navbar-nav .nav-link:not(.btn)
+  font-size: 1rem
+  font-weight: 700
+  color: $color-main-dark !important
+  padding: 0.7rem 0.8rem
+  @include bp-medium
+    @include bp-max-large
+      padding: .7rem 0.3rem
+      @include font-size(14.4px)
+  &.active
+    svg
+      path
+        fill: $color-green-1
+.navbar
+  padding: 0.3rem 0.5rem
+  background: $color-white
+  @include bp-large
+    padding: 0.5rem 1.5rem
+  transition: 0.15s all ease
+  // box-shadow: -1px 4px 77px rgba(18,46,59,0.05)
+  border-bottom: 1px solid #eee
+  li a svg
+    top: 0.15em
+    padding-right: 1.4em
+    position: relative
+    path
+      fill: #C6C6CD
+  ul
+    li:last-child
+      padding-right: 1rem
+  .btn
+    font-size: 1rem
+    margin-left: 1rem
+    color: $color-white !important
+  .dropdown-menu
+    // transition: all 2s ease
+    // -webkit-transition: all 0.3s
+    // -moz-transition: all 0.3s
+    // -ms-transition: all 0.3s
+    // -o-transition: all 0.3s
+    // transition: all 0.5s ease-in-out
+    // max-height: 0
+    // display: block
+    // overflow: hidden
+    // opacity: 0
+    box-shadow: 0 6px 14px 0 rgba(23, 28, 33, 0.08)
+    border: 0
+    border-radius: .5rem
+  // .dropdown:hover .dropdown-menu
+  //   max-height: 200px
+  //   opacity: 1
+  .dropdown:hover > .dropdown-menu
+    @include bp-small
+      display: block
+  .dropdown > .dropdown-toggle:active
+    @include bp-small
+      // pointer-events: none
+  .dropdown-item.active, .dropdown-item:active
+      background-color: $color-green-1
+  a.dropdown-item
+    font-weight: 500
+// End navigation
+
+// Layout
+.wrapper
+  padding-bottom: 9rem
+  &.gray
+    background: $color-off-white
+  &.home
+    padding-bottom: 11.4rem
+.container
+  width: 1200px
+  max-width: 100%
+  @include bp-large
+    max-width: 95%
+  &.profile
+    .content
+      position: relative
+      margin-top: -2.9em
+      @include bp-medium
+        margin-top: -13.2rem
+  &.hero.profile
+    .c-link, .company
+      @include bp-max-medium
+        display: none
+  &.offset
+    margin-top: -6rem
+  &.profile
+    padding-bottom: 0
+    img.icon
+      float: left
+      margin-top: 0.1rem
+    ul.fund-data li p
+      margin-bottom: 0.5rem
+      padding-left: 1.7em
+      font-size: 1.1rem
+    .card
+      h5
+        margin-bottom: 1.2rem
+        &.mobile
+          display: none
+          @include bp-max-small
+            display: block
+            margin-bottom: .7rem
+        &.mob-up
+          display: none
+          @include bp-small
+            display: block
+      p
+        padding-left: 1.9em
+        @include bp-max-small
+          margin-bottom: .4em
+      .company
+        box-shadow: none
+        border-radius: 0
+        padding: 1.9rem 1rem
+        margin-top: 0
+        position: absolute
+        top: 0
+        right: 0
+        max-width: 49%
+        @include bp-small
+          display: none
+  &.no-head
+    padding: 5.3rem 15px 0
+    @include bp-medium
+      padding: 6.5rem 15px 0
+header
+  background: $color-off-white
+  padding: 5.8em 0 12.1em
+  @include bp-medium
+    padding: 6.3em 0 13.6em
+  @include bp-large
+    padding: 6.6em 0 14em
+  @include bp-xlarge
+    padding: 7.3em 0 14.4em
+  background-image: url(img/bg-header-left.svg), url(img/bg-header-right.svg)
+  background-repeat: no-repeat, no-repeat
+  background-position: left 3rem, bottom right
+  // background: #292b35
+  // padding-top: 6.9em
+  // padding-bottom: 10.8em
+  // background-image: radial-gradient(132% 90% at top center,hsla(230, 18%, 21%, 1) 0,#16191e 98%),linear-gradient(-180deg,rgba(17, 44, 153, 0.48),rgba(17,44,153,0) 96%)
+  &.header-home
+    text-align: center
+    @include bp-small
+      // padding-left: 1.5rem
+  &.header-page
+    text-align: left
+    padding: 4em 0 2.8em
+    @include bp-medium
+      padding: 10.5em 0 2.4em
+    .info
+      text-align: center
+      margin-bottom: 1.9em
+      @include bp-medium
+        padding-left: 2.5rem
+        margin-bottom: 0
+        text-align: left
+    h1
+      @include bp-max-small
+        @include font-size(26px)
+        text-align: center
+      @include bp-medium
+        @include font-size(42px)
+      @include bp-large
+        @include font-size(51px)
+      margin-bottom: 0.9rem
+  p
+    margin-bottom: 0
+    max-width: 695px
+    margin: 0 auto
+    @include bp-medium
+      @include font-size(19.5px)
+    @include bp-large
+      @include font-size(21px)
+    @include bp-xlarge
+      font-size: 1.25em
+  h1
+    @include font-size(29px)
+    @include bp-medium
+      @include font-size(46px)
+    @include bp-large
+      @include font-size(51px)
+    @include bp-xlarge
+      @include font-size(57px)
+.header-page
+  &.sm-head
+    text-align: center
+    padding: 4.4em 0 5.9em
+    @include bp-medium
+      padding: 5.8em 0 6.5em
+    h1
+      @include bp-medium
+        @include font-size(43px)
+// End layout
+
+
+//  Homepage specific
+.unlock, .stats
+  text-align: center
+  padding: 2.8rem 0 1rem
+  @include bp-medium
+    padding: 6rem 0 1rem
+  h3
+    font-size: 6vw
+    @include bp-medium
+      font-size: 2rem
+    margin-bottom: 1.35rem
+.unlock
+  img
+    &.full
+      width: 1147px
+      max-width: 90%
+.get-started
+  background: #1a1c21
+  width: 985px
+  margin: 0 auto
+  position: relative
+  margin-top: -9rem
+  padding: 1.5rem
+  @include bp-medium
+    padding: 3.7rem 3rem
+  text-align: center
+  @include bp-medium
+    text-align: left
+  border-radius: 13px
+  max-width: 92%
+  margin-bottom: 7rem
+  h3
+    @include bp-medium
+      @include vertical-align()
+    color: $color-white
+    @include bp-medium
+      font-size: 2rem
+    @include bp-large
+      font-size: 2.4rem
+    font-weight: 700
+    @include bp-medium
+      margin-bottom: 0
+    margin-bottom: 1em
+  p
+    margin-bottom: 0
+    color: #87878D
+  a
+    padding: 1.1rem
+    width: 100%
+    font-size: 1.3rem
+    font-weight: 800
+section
+  position: relative
+  &.stats
+    margin-top: -25vw
+    @include bp-xlarge
+      margin-top: -16em
+    background-image: linear-gradient(-180deg, $color-off-white 3%, $color-white 81%)
+    padding: 5rem 0 0
+    div[class*='col-']
+      display: flex
+    h3
+      margin-bottom: 1.5em
+      margin-top: 1em
+    .container.offset-large
+      padding-top: 11vw
+      @include bp-medium
+        padding-top: 12vw
+      @include bp-medium
+        padding-top: 10em
+  &.unlock p
+    padding-bottom: 2em
+
+.sec-icon
+  margin-bottom: 1.6rem
+// End homepage
+
+
+// Profile specific
+.profile-img
+  // width: 50%
+  @include bp-small
+    width: 100%
+.profile-img:not(.no-b)
+  img
+    border-bottom: 6px solid $color-green-3
+.pr-content
+  padding-bottom: 2.1rem
+  border-bottom: 1px solid #E9E9E9
+  margin-bottom: 2.6rem
+  &:last-child
+    border: 0
+    margin-bottom: 0
+    padding-bottom: 0
+  .card
+    margin-top: 1rem
+    margin-bottom: 0.8rem
+  h5
+    color: #898a94
+    font-size: 1.3rem
+    margin-top: 0.9rem
+  .card-body
+    padding: 1.75rem 1.25rem 1.05rem
+  p
+    @include bp-medium
+      font-size: .925em
+    margin-bottom: 1rem !important
+    &:last-child
+      margin-bottom: 0
+  img:not(.icon)
+    border-radius: 5px
+  h4
+    font-weight: 700
+    font-size: 1.3rem
+    letter-spacing: .01em
+    margin-bottom: 1.2rem
+    img
+      margin-top: -0.3rem !important
+      position: relative
+      margin-right: 0.6rem
+  &.has-img
+    .row
+      text-align: center
+      [class*="3"]:nth-child(-n+4), [class*="4"]:nth-child(-n+3)
+        padding-top: 0.6em
+      [class*="3"]:nth-child(n+5)
+        margin-top: 2.5rem
+      [class*="4"]:nth-child(n+4)
+        margin-top: 2rem
+    &:not(#team)
+      img:not(.icon)
+        border: 1px solid #e0dcdc
+// End profile
+
+
+// News feed and search
+.feed
+  .card
+    margin-bottom: 1.3rem
+    @include bp-medium
+      margin-bottom: 2rem
+    &.search
+      margin-bottom: 3rem
+      form
+        border-top: 1px solid #e5e7e9
+        padding-top: 1.5em
+        margin-top: 0.8em
+        @include bp-medium
+          margin-top: 1.4em
+          padding-top: 1.5em
+
+  p
+    &:not(.poster)
+      font-size: 16px
+      padding-top: 1.1rem
+      color: #56565f
+    &.timing
+      padding-top: 0
+      @include bp-max-small
+        margin-top: auto !important
+    &.status
+      @include font-size(17px)
+      margin-top: 0.3rem
+      color: $color-main-dark
+      span
+        font-weight: 700
+  .share
+    h6
+      font-size: 19px
+      font-weight: 700
+      margin-bottom: 1.3rem
+      img
+        margin-right: 0.6rem
+        margin-top: -0.2rem
+  .media
+    h6
+      margin-bottom: 0.3rem
+      font-weight: 700
+      @include font-size(17px)
+      @include bp-small
+        @include font-size(18px)
+    .e-date
+      padding: 0.4rem 0.6rem
+      text-align: center
+      border-radius: 5px
+      margin-right: 0.8rem
+      width: 90px
+      height: 90px
+      box-shadow: -1px 20px 40px -6px rgba(18, 46, 59, 0.16)
+      background: $color-white
+    p
+      @include font-size(14px)
+      margin-bottom: 0
+      padding: 0
+      line-height: 1.4
+      &.e-month
+        font-weight: 700
+        color: $color-blue-medium
+        @include font-size(19px)
+        padding: 0
+        margin: 0
+      &.e-day
+        color: #2e3141
+        margin: 0
+        padding: 0
+        @include font-size(26px)
+        line-height: 1
+    img:not(.icon)
+      width: 60px
+      height: 60px
+      @include bp-medium
+        width: 90px
+        height: 90px
+      border-radius: 5px
+      box-shadow: -1px 20px 40px -6px rgba(18,46,59,0.16)
+      &.c-poster
+        box-shadow: none
+        border: 2px solid #eee
+    &.comment
+      img
+        margin-top: 0 !important
+        width: 40px
+        height: 40px
+    textarea
+      resize: none
+      min-height: 45px
+      overflow: hidden
+      box-sizing: border-box
+  .with-img
+    padding: 0.5rem .7rem .7rem
+    @include bp-medium
+      padding: .9rem 1.7rem 1.7rem
+    .media
+      img, .e-date
+        margin-top: -1em
+        @include bp-medium
+          margin-top: -1.9em
+  .no-img
+    padding: 0.9rem
+    @include bp-medium
+      padding: 1.7rem
+    .media:not(.comment)
+      align-items: center
+    .timing
+      margin-top: -1.4rem
+  .srch-results
+    &.com
+      h3
+        margin-bottom: 0.3rem
+      p.srch
+        padding-top: 0.8rem
+    p
+      @include font-size(16px)
+      margin-top: 1em
+    ul
+      margin-bottom: 0
+      &.search
+        padding-top: 1.5em
+        margin-top: 1.4em
+        @include bp-medium
+          padding-top: 2em
+          margin-top: 2em
+        border-top: 1px solid #e5e7e9
+      &.search:first-of-type
+        margin-top: 0.8em
+        @include bp-medium
+          margin-top: 1.4em
+    li.media
+      position: relative
+    hr:first-of-type
+      margin: 1.6rem 0 2.7rem
+    hr
+      margin: 2.4rem auto
+    p
+      &.srch
+        margin: 0.3rem 0 .6rem
+    h3
+      @include font-size(20px)
+      @include bp-medium
+        @include font-size(28px)
+      margin-bottom: 0.8rem
+    .company
+      margin-top: 0
+      box-shadow: none
+      padding: 0
+      background: transparent
+      display: inline-block
+      position: absolute
+      top: 0
+      right: 0
+      max-width: 125px
+      img
+        width: auto
+        height: auto
+      @include bp-max-small
+        display: none
+    .btn
+      width: 100%
+      border-radius: 100px
+      padding: 0.4rem 0
+      font-size: 10px
+      @include bp-medium
+        font-size: 13px
+      text-transform: uppercase
+      letter-spacing: 0.1em
+      font-weight: 800
+      margin-top: 0.7rem
+    img
+      &.round
+        border-radius: 10px
+        box-shadow: none
+      &.com
+        border: 2px solid #dcdce4
+    span
+      &.c-name
+        padding: 0.3rem 1.4rem
+        @include font-size(17px)
+      &.loc
+        @include font-size(17px)
+        color: #898b98
+        font-weight: 600
+        margin-right: 0.6rem
+    a.c-link
+      @include font-size(17px)
+      @include bp-max-medium
+        display: none
+    .icon-link
+      width: 1.5em
+      margin-left: 0.5em
+    .icon-loc
+      margin-top: -.1em
+      padding-right: 5px
+    .fund-data
+      margin-top: 0.5em
+      p
+        padding: 0
+        margin-top: .4rem
+        margin-bottom: 0
+  .actions
+    img
+      cursor: pointer
+  span
+    &.count
+      @include font-size(14px)
+      padding-left: .35rem
+  .sidebar-grp
+    .e-date
+      padding: 0.4rem 0.6rem
+      text-align: center
+      border: 2px solid #dcdce4
+      border-radius: 5px
+      margin-right: 0.8rem
+      width: auto
+      height: auto
+      box-shadow: none
+    .e-month
+      font-weight: 700
+      color: $color-blue-medium
+      @include font-size(16px)
+      padding: 0
+      margin: 0
+    .e-day
+      color: #2e3141
+      margin: 0
+      padding: 0
+      font-size: 20px !important
+      font-size: 1.2375rem !important
+        line-height: 1
+.sidebar
+  display: none
+  @include bp-large
+    display: block
+.feed-img
+  background-size: cover
+  background-repeat: no-repeat
+  width: 100%
+  height: 0
+  padding-top: 31%
+  border-bottom: 6px solid rgb(157, 203, 107)
+.update
+  position: absolute
+  top: 0
+  right: 0
+  border-radius: 0 0 0 10px
+  padding: 0.2rem 0.8rem 0.35rem
+  &.new-job
+    background: $color-update-1
+  &.new-status
+    background: $color-update-2
+  &.new-event
+    background: $color-update-3
+.loading
+  text-align: center
+
+
+// End news feed and search
+.thumb-srch
+  width: 60px
+  margin-right: 1em
+  @include bp-medium
+    width: 90px
+    margin-right: 1.6em
+
+// Card styling
+.content .card
+  img:not(.icon)
+    width: 100%
+  .media
+    &.sidebar-rt
+      img:not(.icon)
+        width: 40px
+        height: 40px
+        border-radius: 5px
+      .media-body
+        overflow: hidden
+      p, h6
+        position: relative
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+      h6
+        font-weight: 700
+        margin-bottom: 0
+        font-size: 1rem
+      p
+        @include font-size(16px)
+  .btn
+    width: 100%
+  hr
+    margin: 2rem 0
+.card
+  background: $color-white
+  // box-shadow: -1px 62px 96px -13px rgba(18, 46, 59, 0.13)
+  box-shadow: 0 4px 9px 0 rgba(23,28,33,.06)
+  margin-bottom: 1.5rem
+  border-radius: 7px
+  overflow: hidden
+  position: relative
+  flex: 1
+  border: 0
+  &.signup
+    width: 100%
+    max-width: 800px
+    margin: 0 auto
+    .main-form
+      h5
+        margin-bottom: 0.5em
+        color: $color-blue-medium
+        font-size: 1rem
+        text-transform: uppercase
+        letter-spacing: 0.6px
+        text-align: center
+  &.txt
+    width: 100%
+    max-width: 1000px
+    margin: 0 auto
+  .content
+    padding: 1.5em
+  h5
+    font-weight: 700
+    font-size: 1.35rem
+    margin-bottom: 0
+  &.search
+    h5
+      @include font-size(21px)
+      img
+        margin-right: 0.9rem
+        margin-top: -0.2rem
+    h6
+      color: $color-blue-medium
+      font-weight: 700
+      @include font-size(17px)
+      margin-bottom: 0.3rem
+    hr
+      margin: 1.6rem 0px
+  &.feed-user
+    .the-info
+      @include bp-max-medium
+        width: 53%
+        position: absolute
+        right: 0
+        transform: translateY(-50%)
+        top: 50%
+      @include bp-small
+        @include bp-max-medium
+          right: 2.5em
+    .the-img
+      @include bp-max-medium
+        width: 37%
+    hr
+      @include bp-max-medium
+        display: none
+    ul.types
+      @include bp-max-medium
+        display: none
+    h5
+      @include font-size(19px)
+      @include bp-max-small
+        margin-bottom: 0.1em
+      @include bp-max-x-small
+        @include font-size(17px)
+      @include bp-small
+        @include bp-max-medium
+          @include font-size(33px)
+    h6
+      color: $color-blue-medium
+      font-weight: 700
+      @include font-size(17px)
+      margin-bottom: 0.3rem
+    ul.list-unstyled
+      margin-bottom: 0
+      &.types
+        li
+          margin-top: 1rem
+      li
+        p
+          @include font-size(15px)
+          margin-bottom: 0.1rem
+          padding-top: 0
+          @include bp-max-small
+            margin-bottom: 0
+            line-height: 1.4
+          @include bp-max-x-small
+            @include font-size(12.5px)
+          @include bp-small
+            @include bp-max-medium
+              @include font-size(16px)
+    hr
+      margin: 0.8rem 0px
+  &.flat
+    background: #f0f1f5
+    box-shadow: none
+    flex: 1
+    flex-direction: column
+    display: flex
+    p
+      flex-grow: 1
+      font-size: 1em
+      @include bp-large
+        @include font-size(20px)
+      line-height: 1.3
+    &::after
+      content: ''
+      background: #E4E6EB
+      position: absolute
+      bottom: 0
+      height: 9px
+      width: 60px
+      left: 50%
+      transform: translateX(-50%)
+  .sidebar-grp
+    h5
+      padding-bottom: 0.7rem
+      color: #a9a9b3
+      @include font-size(19px)
+    .media
+      &.sidebar-rt
+        margin-bottom: 1rem
+      p
+        margin-bottom: 0
+    a.btn
+      @include font-size(17px)
+      padding: 0.55rem 0.75rem
+      margin-top: 0.3rem
+// End card styling
+
+
+// Etc
+.or-sep
+  margin: 2.1rem auto 0.8rem
+  text-align: center
+  border-top: 1px solid #E9E9E9
+  max-width: 720px
+  span
+    padding: 0 10px
+    background: $color-white
+    position: relative
+    top: -16px
+    z-index: 1
+    font-size: 1rem
+svg
+  &.msg
+    @include bp-small
+      margin-left: 1rem
+      position: relative
+      top: -2px
+  &.active
+    .msg-active
+      fill: $color-blue-medium
+      stroke: $color-white
+.user-type
+  position: relative
+  margin-top: -11.8rem
+  text-align: center
+  p
+    @include font-size(17.3px)
+    margin-bottom: 1.2rem
+    font-size: 0.94em
+    flex-grow: 1
+  div[class*='col-']
+    display: flex
+  .card
+    .btn
+      @include font-size(20px)
+      padding: 0.875rem .75rem
+      @include bp-small
+        padding: 1.175rem .75rem
+      font-weight: 800
+    h5
+      font-weight: 700
+      font-size: 1.35rem
+      margin: 1rem auto 0.6rem
+.card-a
+  transition: all 0.25s ease
+  flex: 1
+  flex-direction: column
+  display: flex
+  p
+    color: #5c5d66
+    font-weight: 500
+    &:hover
+      color: #5c5d66
+      font-weight: 500
+  &:hover
+    transform: translateY(-2px)
+    box-shadow: 0 18px 17px 0 rgba(23, 28, 33, 0.03)
+    .btn
+      color: $color-white
+      background: lighten( $color-green-2, 3% )
+      transform: 0
+  &:active
+    color: darken( $color-white, 3% )
+    transform: translateY(1px)
+
+.company
+  background: $color-white
+  box-shadow: -1px 23px 96px -13px rgba(18, 46, 59, 0.13)
+  border-radius: 6px
+  overflow: hidden
+  padding: 1.9rem 1rem
+  margin-top: 0.9rem
+
+.row.fund-data li p
+  padding-left: 0 !important
+  span
+    color: $color-main-dark
+    font-weight: 700
+// End etc
+
+
+@media only screen and (min-width: 768px)
+  .navbar-nav .nav-link
+    padding: 0.6rem 1.9rem
+    font-size: 1.15rem
+    &.btn
+      padding: 0.4rem 0.8rem
+      margin-top: 4px
+      @include font-size(17px)
+  .card
+    margin-bottom: 0
+  .content
+    .card
+      div[class*='col-']:not(.col-sm-12)
+        &:first-child
+          padding-right: 5px
+        &:last-child
+          padding-left: 5px
+  footer menu menuitem
+    width: auto
+    display: inline
+
+@media only screen and (min-width: 1200px)
+  section.unlock p
+    @include font-size(20px)
+    max-width: 910px
+    margin: 0 auto
+    line-height: 1.55
+    letter-spacing: .01em
+  header
+    &.header-page p
+      margin: 0

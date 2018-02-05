@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="341" height="498" viewBox="0 0 341 498">
+  <defs>
+    <linearGradient id="rectangle-a" x1="56.256%" x2="64.68%" y1="79.344%" y2="62.192%">
+      <stop offset="0%" stop-color="#F7F8FA"/>
+      <stop offset="100%" stop-color="#F2F2F7"/>
+    </linearGradient>
+  </defs>
+  <polygon fill="url(#rectangle-a)" fill-rule="evenodd" points="918.675 0 1804 0 885.325 1341 0 1341" transform="translate(-907 -812)"/>
+</svg>

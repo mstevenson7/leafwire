@@ -1,0 +1,252 @@
+html
+  font-size: 100%
+  -webkit-text-size-adjust: 100%
+  font-variant-ligatures: none
+  -webkit-font-variant-ligatures: none
+  text-rendering: optimizeLegibility
+  -moz-osx-font-smoothing: grayscale
+  font-smoothing: antialiased
+  -webkit-font-smoothing: antialiased
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px
+
+body
+  font-family: Gilroy
+  font-size: 19px
+  color: #5c5d66
+  font-weight: 500
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+  color: $color-main-dark
+  font-weight: 800
+
+h5
+  &.fnd
+    color: $color-green-1 !important
+    @include font-size(25px)
+
+h6
+  &.sml
+    font-size: 1.1rem
+    margin-top: 0.7rem
+    font-weight: 700
+    margin-bottom: 0.25rem
+
+h2
+  &.x-large-thin
+    @include font-size(64px)
+    @include bp-medium
+      font-size: 6vw
+    @include bp-large
+      font-size: 4.5rem
+    font-weight: 400
+    margin-bottom: 0
+
+p
+  @include font-size(16.5px)
+  &.copyright
+    font-size: 0.8em
+    margin-top: 3rem
+  &.lrg
+    color: #3e484d
+    text-align: center
+    font-size: 1.3em
+    margin-bottom: 0
+    line-height: 1.25
+  &.sml
+    font-size: 0.9em
+    line-height: 1.4
+    margin-top: 0.5rem
+    // max-width: 565px
+    margin-bottom: 1.4em
+    color: #8f9099
+
+a
+  color: $color-main-dark
+  font-weight: 700
+  &.clr-link
+    color: $color-blue-medium
+  &:hover
+    text-decoration: none
+    color: $color-main-dark
+  &.load-more
+    width: 100%
+    padding: 2.4rem 0
+    background: $color-off-white
+    color: $color-blue-medium
+    display: block
+    text-align: center
+  &.c-link
+    @include bp-max-small
+      display: block
+    color: #898b98
+    font-weight: 600
+
+ul
+  &.social
+    margin-top: 1.5rem
+  &.actions
+    li
+      margin-right: 1rem !important
+
+.center
+  text-align: center
+  margin: 0 auto
+
+.small
+  line-height: 1.5
+  font-size: 0.7em
+
+.row
+  &.btn-contain
+    margin-top: 1rem
+
+.align-right
+  text-align: right
+
+.pad-xs
+  padding: 1.3rem
+
+.pad-std
+  padding: 1.3rem
+  @include bp-small
+    padding: 1.9rem 1.6rem
+
+.pad-md
+  padding: 1rem
+  @include bp-large
+    padding: 1rem 1.6rem
+  &.newsfeed
+    @include bp-max-small
+      padding: 1rem 0
+    @include bp-small
+      @include bp-max-medium
+        padding: 1rem 1.3rem
+
+.pad-lg
+  padding: 1.1rem
+  @include bp-small
+    padding: 2rem 1.7rem
+
+.pad-xl
+  padding: 2rem 1.5rem
+  @include bp-medium
+    padding: 2rem
+
+.pad-xxl
+  padding: 2rem 1rem 0
+  @include bp-medium
+    padding: 3rem 2.5rem 0
+
+.logo-main
+  max-width: 150px
+  @include bp-large
+    max-width: 205px
+footer
+  background: #1e202a
+  text-align: center
+  padding-top: 5rem
+  padding-bottom: 5rem
+  menu
+    text-align: center
+    margin: 1em 0 0
+    padding: 0
+    menuitem
+      padding: 0 1rem
+      width: 100%
+      display: block
+  .f-logo
+    margin-bottom: 1rem
+  a
+    color: #D0D0DB
+    font-size: 1.1rem
+    font-weight: 500
+    &:hover
+      color: $color-white
+
+.vert-center
+  @include vertical-align()
+
+span
+  &.strong
+    color: $color-main-dark
+    font-weight: 700
+  &.pr-small
+    @include font-size(14px)
+    font-weight: 500
+    color: #777880
+    display: block
+  &.c-name
+    background: #898b98
+    padding: 0.4rem 1.8rem
+    margin-right: 1rem
+    border-radius: 100px
+    color: $color-white
+    font-weight: 700
+
+.card.sticky
+  position: relative
+  @include bp-medium
+    position: -webkit-sticky
+    position: -moz-sticky
+    position: -ms-sticky
+    position: -o-sticky
+    position: sticky
+    top: 6.5rem
+
+.no-stick
+  top: 0
+  position: relative
+
+.modal-open .modal
+  padding-right: 0 !important
+
+.modal-content
+  text-align: center
+
+body.modal-open
+  overflow: inherit
+
+.txt
+  p
+    margin: 0 auto 1em !important
+    @include bp-large
+      font-size: 1em
+
+.col-xs-2
+    -webkit-box-flex: 0
+    -ms-flex: 0 0 16.666667%
+    flex: 0 0 16.666667%
+    max-width: 16.666667%
+
+.col-xs-3
+    -webkit-box-flex: 0
+    -ms-flex: 0 0 25%
+    flex: 0 0 25%
+    max-width: 25%
+
+.col-xs-4
+  @include bp-max-small
+    -webkit-box-flex: 0
+    -ms-flex: 0 0 33.333333%
+    flex: 0 0 33.333333%
+    max-width: 33.333333%
+
+.col-xs-6
+  @include bp-max-small
+    -webkit-box-flex: 0
+    -ms-flex: 0 0 50%
+    flex: 0 0 50%
+    max-width: 50%
+
+.col-xs-8
+  @include bp-max-small
+    -webkit-box-flex: 0
+    -ms-flex: 0 0 66.666667%
+    flex: 0 0 66.666667%
+    max-width: 66.666667%
+
+.col-xs-10
+  -webkit-box-flex: 0
+  -ms-flex: 0 0 83.333333%
+  flex: 0 0 83.333333%
+  max-width: 83.333333%

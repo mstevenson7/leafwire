@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1535" height="503" viewBox="0 0 1535 503">
+  <defs>
+    <rect id="bg-header-a" width="1535" height="503"/>
+    <linearGradient id="bg-header-c" x1="56.256%" x2="64.68%" y1="79.344%" y2="62.192%">
+      <stop offset="0%" stop-color="#F7F8FA"/>
+      <stop offset="100%" stop-color="#F2F2F7"/>
+    </linearGradient>
+    <linearGradient id="bg-header-d" x1="46.945%" x2="39.074%" y1="11.26%" y2="33.632%">
+      <stop offset="0%" stop-color="#F7F8FA"/>
+      <stop offset="100%" stop-color="#F2F2F7"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="bg-header-b" fill="#fff">
+      <use xlink:href="#bg-header-a"/>
+    </mask>
+    <use fill="#F7F8FA" opacity="0" xlink:href="#bg-header-a"/>
+    <g mask="url(#bg-header-b)">
+      <g transform="translate(-907 -812)">
+        <polygon fill="url(#bg-header-c)" points="918.675 0 1804 0 885.325 1341 0 1341"/>
+        <polygon fill="url(#bg-header-d)" points="2401.675 740 3287 740 2368.325 2081 1483 2081"/>
+      </g>
+    </g>
+  </g>
+</svg>

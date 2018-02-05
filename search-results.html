@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Leafwire - Search Results</title>
+  <style>.async-hide { opacity: 0 !important} </style>
+  <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+    h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+    (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+  })(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-TWKCZLC':true});</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-113141076-1', 'auto');
+  ga('require', 'GTM-TWKCZLC');
+  ga('send', 'pageview');
+</script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="custom.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+  <div class="wrapper gray feed">
+    <nav class="navbar navbar-expand-md fixed-top navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="img/logo-main.svg" class="logo-main"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main" aria-controls="navbar-main" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="color: #000;"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-main">
+          <ul class="navbar-nav ml-md-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="16"><path fill-rule="evenodd" d="M9.5 0L2 5.581V16h5.063v-4.651A2.423 2.423 0 0 1 9.5 8.93a2.423 2.423 0 0 1 2.438 2.419V16H17V5.581L9.5 0z"/></svg> Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="16"><path fill-rule="evenodd" d="M13.438 4.048C13.438 1.816 11.67 0 9.5 0 7.329 0 5.562 1.816 5.562 4.048S7.33 8.096 9.5 8.096s3.938-1.816 3.938-4.048m3.5 9.57c.293 1.194-.492 2.382-1.556 2.382H3.618c-1.064 0-1.85-1.188-1.556-2.383.561-2.287 1.912-4.198 3.694-5.328A5.45 5.45 0 0 0 9.5 9.779a5.453 5.453 0 0 0 3.744-1.49c1.782 1.13 3.132 3.04 3.694 5.328"/></svg> My Profile
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Messages</a>
+                <a class="dropdown-item" href="#">Contacts</a>
+                <a class="dropdown-item" href="#">Jobs</a>
+                <a class="dropdown-item" href="#">Events</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Account Settings</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="16"><path d="M6.132 4.268c.102.09.256.082.354-.012a4.615 4.615 0 0 1 3.012-1.3c2.306-.102 4.293 1.494 4.702 3.665.028.147-.09.283-.241.29l-1.008.046c-.228.01-.33.287-.16.437l2.922 2.612a.259.259 0 0 0 .362-.017l2.65-2.876c.153-.166.025-.431-.203-.42l-1.354.063C16.788 2.871 13.36-.08 9.348.102c-1.904.1-3.678.879-5.007 2.225a.25.25 0 0 0 .015.361l1.776 1.58zM.257 8.793h1.276c.13 0 .236.096.252.223a7.74 7.74 0 0 0 2.266 4.586 8.034 8.034 0 0 0 5.647 2.303 7.913 7.913 0 0 0 5.456-2.104.249.249 0 0 0 .004-.361l-2.002-1.967a4.934 4.934 0 0 1-6.91-.02A4.627 4.627 0 0 1 4.958 9.1c-.032-.153.093-.295.253-.295h1.082c.228 0 .343-.27.181-.43L3.46 5.406a.26.26 0 0 0-.363 0L.076 8.363c-.162.158-.048.429.18.429z" fill-rule="evenodd"/></svg> Followed</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          </form>
+          <a href=""><svg class="msg active" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="35"> <defs> <circle id="a" cx="30.5" cy="5.5" r="5.5"/> </defs> <g fill="none" fill-rule="evenodd"> <path fill="#C7C8CD" d="M17 31.472c1.587 0 3.136-.15 4.647-.493L29.164 35l-.642-7.016c.265-.19.529-.38.794-.608C32.34 24.911 34 21.65 34 18.236 34 10.915 26.37 5 17 5 7.63 5 0 10.917 0 18.235c0 7.283 7.63 13.237 17 13.237zm5.364-12.933c0-1.138.906-2.047 2.04-2.047 1.133 0 2.04.91 2.04 2.047a2.034 2.034 0 0 1-2.04 2.047c-1.132-.037-2.04-.946-2.04-2.047zm-3.324 0A2.034 2.034 0 0 1 17 20.586c-1.133 0-2.04-.91-2.04-2.047 0-1.138.907-2.047 2.04-2.047s2.04.91 2.04 2.047zm-9.445-2.047c1.133 0 2.04.91 2.04 2.047a2.034 2.034 0 0 1-2.04 2.047c-1.133 0-2.04-.91-2.04-2.047.04-1.138.945-2.047 2.04-2.047z"/> <g stroke-linecap="square" transform="translate(0 2)"><circle class="msg-active" cx="30.5" cy="5.5" r="6.5" stroke-width="2"/> </g> </g></svg></a>
+        </div>
+      </div>
+    </nav>
+    <div class="container no-head">
+      <div class="row">
+        <div class="col-md-3 content">
+          <div class="card search">
+            <div class="pad-lg">
+              <h5><img class="icon" src="img/icon-filter.svg">Filter Search</h5>
+              <form>
+                <div class="form-group row">
+                  <div class="col-sm-12">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="chk-inv">
+                      <label class="custom-control-label" for="chk-inv">Investors</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="chk-com">
+                      <span class="custom-control-indicator"></span>
+                      <label class="custom-control-label" for="chk-com">Companies</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="chk-net">
+                      <label class="custom-control-label" for="chk-net">Networking</label>
+                    </div>
+                  </div>
+                </div>
+                <select class="custom-select custom-select-lg mb-3">
+                  <option>Company stage</option>
+                </select>
+                <select class="custom-select custom-select-lg mb-3">
+                  <option># of employees</option>
+                </select>
+                <select class="custom-select custom-select-lg mb-3">
+                  <option>Amount raising</option>
+                </select>
+                <select class="custom-select custom-select-lg mb-3">
+                  <option>Industry</option>
+                </select>
+                <select class="custom-select custom-select-lg mb-3">
+                  <option>Location</option>
+                </select>
+                <input class="form-control mr-sm-2 large" type="text" placeholder="Keywords">
+                <div class="form-group row mb-0">
+                  <div class="col-sm-12">
+                    <button type="submit" class="btn">Filter Results</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 tight">
+          <div class="card search">
+            <div class="pad-lg srch-results">
+              <h5><img class="icon" src="img/icon-people.svg">People</h5>
+              <ul class="list-unstyled search">
+                <li class="media">
+                  <div class="thumb-srch">
+                    <img class="img-fluid round" src="img/img-user.jpg" alt="Search Result">
+                    <a href="" class="btn clr-line">Follow</a>
+                  </div>
+                  <div class="media-body">
+                    <h3>Marion Mariathasan</h3>
+                    <span class="c-name">Simplifiya</span><a href="" class="c-link"><img class="icon icon-link" src="img/icon-link.svg" style="padding-right: 7px">simplifiya.com</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore consequatur ut commodi veritatis at porro.</p>
+                    <div class="company">
+                      <a href="#">
+                        <img class="img-fluid" src="img/img-holder-company.jpg">
+                      </a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="list-unstyled search">
+                <li class="media">
+                  <div class="thumb-srch">
+                    <img class="img-fluid round" src="img/img-user.jpg" alt="Search Result">
+                    <a href="" class="btn clr-line">Follow</a>
+                  </div>
+                  <div class="media-body">
+                    <h3>Marion Mariathasan</h3>
+                    <span class="c-name">Simplifiya</span><a href="" class="c-link"><img class="icon icon-link" src="img/icon-link.svg" style="padding-right: 7px">simplifiya.com</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore consequatur ut commodi veritatis at porro.</p>
+                    <div class="company">
+                      <a href="#">
+                        <img class="img-fluid" src="img/img-holder-company.jpg">
+                      </a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="list-unstyled search">
+                <li class="media">
+                  <div class="thumb-srch">
+                    <img class="img-fluid round" src="img/img-user.jpg" alt="Search Result">
+                    <a href="" class="btn clr-line">Follow</a>
+                  </div>
+                  <div class="media-body">
+                    <h3>Marion Mariathasan</h3>
+                    <span class="c-name">Simplifiya</span><a href="" class="c-link"><img class="icon icon-link" src="img/icon-link.svg" style="padding-right: 7px">simplifiya.com</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore consequatur ut commodi veritatis at porro.</p>
+                    <div class="company">
+                      <a href="#">
+                        <img class="img-fluid" src="img/img-holder-company.jpg">
+                      </a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="list-unstyled search">
+                <li class="media">
+                  <div class="thumb-srch">
+                    <img class="img-fluid round" src="img/img-user.jpg" alt="Search Result">
+                    <a href="" class="btn clr-line">Follow</a>
+                  </div>
+                  <div class="media-body">
+                    <h3>Marion Mariathasan</h3>
+                    <span class="c-name">Simplifiya</span><a href="" class="c-link"><img class="icon icon-link" src="img/icon-link.svg" style="padding-right: 7px">simplifiya.com</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore consequatur ut commodi veritatis at porro.</p>
+                    <div class="row fund-data">
+                      <div class="col-md-6">
+                        <ul class="list-unstyled fund-data">
+                          <li id="fund-amount">
+                            <p><span>Looking to Raise:</span> $2,000,000</p>
+                          </li>
+                          <li id="fund-type">
+                            <p><span>Company Type:</span> Compliance</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-md-6">
+                        <ul class="list-unstyled fund-data">
+                          <li id="fund-stage">
+                            <p><span>Stages:</span> A</p>
+                          </li>
+                          <li id="fund-size">
+                            <p><span>Size:</span> 10-20 Employees</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="company">
+                      <a href="#">
+                        <img class="img-fluid" src="img/img-holder-company.jpg">
+                      </a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="load-more">View All People</a>
+          </div>
+          <div class="card search">
+            <div class="pad-lg srch-results com">
+              <h5><img class="icon" src="img/icon-s-companies.svg">Companies</h5>
+              <ul class="list-unstyled search">
+                <li class="media">
+                  <div class="thumb-srch">
+                    <img class="img-fluid round com" src="img/img-holder-c.jpg" alt="Search Result">
+                    <a href="" class="btn clr-line">Follow</a>
+                  </div>
+                  <div class="media-body">
+                    <h3>Leafwire</h3>
+                    <span class="loc"><img class="icon-loc" src="img/icon-location.svg">
+                    Denver, CO</span><a href="" class="c-link"><img class="icon icon-link" src="img/icon-link.svg" style="padding-right: 7px">simplifiya.com</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore consequatur ut commodi veritatis at porro.</p>
+                    <div class="row fund-data">
+                      <div class="col-md-6">
+                        <ul class="list-unstyled fund-data">
+                          <li id="fund-amount">
+                            <p><span>Looking to Raise:</span> $2,000,000</p>
+                          </li>
+                          <li id="fund-type">
+                            <p><span>Company Type:</span> Compliance</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-md-6">
+                        <ul class="list-unstyled fund-data">
+                          <li id="fund-stage">
+                            <p><span>Stages:</span> A</p>
+                          </li>
+                          <li id="fund-size">
+                            <p><span>Size:</span> 10-20 Employees</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="list-unstyled search">
+                <li class="media">
+                  <div class="thumb-srch">
+                    <img class="img-fluid round com" src="img/img-holder-c.jpg" alt="Search Result">
+                    <a href="" class="btn clr-line">Follow</a>
+                  </div>
+                  <div class="media-body">
+                    <h3>Leafwire</h3>
+                    <span class="loc"><img class="icon-loc" src="img/icon-location.svg">
+                    Denver, CO</span><a href="" class="c-link"><img class="icon icon-link" src="img/icon-link.svg" style="padding-right: 7px">simplifiya.com</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore consequatur ut commodi veritatis at porro.</p>
+                    <div class="row fund-data">
+                      <div class="col-md-6">
+                        <ul class="list-unstyled fund-data">
+                          <li id="fund-amount">
+                            <p><span>Looking to Raise:</span> $2,000,000</p>
+                          </li>
+                          <li id="fund-type">
+                            <p><span>Company Type:</span> Compliance</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-md-6">
+                        <ul class="list-unstyled fund-data">
+                          <li id="fund-stage">
+                            <p><span>Stages:</span> A</p>
+                          </li>
+                          <li id="fund-size">
+                            <p><span>Size:</span> 10-20 Employees</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="list-unstyled search">
+                <li class="media">
+                  <div class="thumb-srch">
+                    <img class="img-fluid round com" src="img/img-holder-c.jpg" alt="Search Result">
+                    <a href="" class="btn clr-line">Follow</a>
+                  </div>
+                  <div class="media-body">
+                    <h3>Leafwire</h3>
+                    <span class="loc"><img class="icon-loc" src="img/icon-location.svg">
+                    Denver, CO</span><a href="" class="c-link"><img class="icon icon-link" src="img/icon-link.svg" style="padding-right: 7px">simplifiya.com</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore consequatur ut commodi veritatis at porro.</p>
+                    <div class="row fund-data">
+                      <div class="col-md-6">
+                        <ul class="list-unstyled fund-data">
+                          <li id="fund-amount">
+                            <p><span>Looking to Raise:</span> $2,000,000</p>
+                          </li>
+                          <li id="fund-type">
+                            <p><span>Company Type:</span> Compliance</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-md-6">
+                        <ul class="list-unstyled fund-data">
+                          <li id="fund-stage">
+                            <p><span>Stages:</span> A</p>
+                          </li>
+                          <li id="fund-size">
+                            <p><span>Size:</span> 10-20 Employees</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="list-unstyled search">
+                <li class="media">
+                  <div class="thumb-srch">
+                    <img class="img-fluid round com" src="img/img-holder-c.jpg" alt="Search Result">
+                    <a href="" class="btn clr-line">Follow</a>
+                  </div>
+                  <div class="media-body">
+                    <h3>Leafwire</h3>
+                    <span class="loc"><img class="icon-loc" src="img/icon-location.svg">
+                    Denver, CO</span><a href="" class="c-link"><img class="icon icon-link" src="img/icon-link.svg" style="padding-right: 7px">simplifiya.com</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore consequatur ut commodi veritatis at porro.</p>
+                    <div class="row fund-data">
+                      <div class="col-md-6">
+                        <ul class="list-unstyled fund-data">
+                          <li id="fund-amount">
+                            <p><span>Looking to Raise:</span> $2,000,000</p>
+                          </li>
+                          <li id="fund-type">
+                            <p><span>Company Type:</span> Compliance</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-md-6">
+                        <ul class="list-unstyled fund-data">
+                          <li id="fund-stage">
+                            <p><span>Stages:</span> A</p>
+                          </li>
+                          <li id="fund-size">
+                            <p><span>Size:</span> 10-20 Employees</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="load-more">View All Companies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <img src="img/logo-light.svg" class="f-logo img-fluid">
+      <menu>
+        <menuitem><a href="">Home</a></menuitem>
+        <menuitem><a href="">About Us</a></menuitem>
+        <menuitem><a href="">FAQ</a></menuitem>
+        <menuitem><a href="">Privacy Policy</a></menuitem>
+        <menuitem><a href="">Terms of Use</a></menuitem>
+        <menuitem><a href="">Customer Care</a></menuitem>
+      </menu>
+      <p class="copyright">Copyright <span aria-hidden="true">©</span> 2018, Leafwires Inc.</p>
+    </div>
+  </footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
