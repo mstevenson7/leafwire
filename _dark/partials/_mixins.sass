@@ -1,0 +1,50 @@
+@mixin vertical-align($position: relative)
+  position: $position
+  top: 50%
+  -webkit-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  transform: translateY(-50%)
+
+@mixin bp-xlarge
+  @media only screen and (min-width: 1200px)
+    @content
+
+@mixin bp-large
+  @media only screen and (min-width: 992px)
+    @content
+
+@mixin bp-medium
+  @media only screen and (min-width: 768px)
+    @content
+
+@mixin bp-small
+  @media only screen and (min-width: 576px)
+    @content
+
+@mixin bp-max-xlarge
+  @media only screen and (max-width: 1200px)
+    @content
+
+@mixin bp-max-large
+  @media only screen and (max-width: 992px)
+    @content
+
+@mixin bp-max-medium
+  @media only screen and (max-width: 768px)
+    @content
+
+@mixin bp-max-small
+  @media only screen and (max-width: 576px)
+    @content
+
+@mixin bp-max-x-small
+  @media only screen and (max-width: 330px)
+    @content
+
+
+@function calculateRem($size)
+  $remSize: $size / 16px
+  @return $remSize * 1rem
+@mixin font-size($size)
+  font-size: $size
+  font-size: calculateRem($size)

@@ -198,7 +198,7 @@ a.btn:not(.clr-line), button.btn
 .navbar-nav .nav-link:not(.btn)
   font-size: 1rem
   font-weight: 700
-  color: $color-main-dark !important
+  color: #d6d9e1 !important
   padding: 0.7rem 0.8rem
   @include bp-medium
     @include bp-max-large
@@ -209,13 +209,12 @@ a.btn:not(.clr-line), button.btn
       path
         fill: $color-green-1
 .navbar
-  padding: 0.3rem 0.5rem
-  background: $color-white
+  background: #292c35
+  transition: .15s all ease
   @include bp-large
     padding: 0.5rem 1.5rem
-  transition: 0.15s all ease
+  transition: 0.25s all ease
   // box-shadow: -1px 4px 77px rgba(18,46,59,0.05)
-  border-bottom: 1px solid #eee
   li a svg
     top: 0.15em
     padding-right: 1.4em
@@ -261,15 +260,18 @@ a.btn:not(.clr-line), button.btn
 // Layout
 .wrapper
   padding-bottom: 9rem
+  background: #f7f8fa
   &.gray
-    background: $color-off-white
+    background: #e9ebef
   &.home
-    padding-bottom: 11.4rem
+    padding-bottom: 0
 .container
   width: 1200px
   max-width: 100%
   @include bp-large
     max-width: 95%
+  &.hero
+    padding-left: 2rem
   &.profile
     .content
       position: relative
@@ -323,28 +325,23 @@ a.btn:not(.clr-line), button.btn
     @include bp-medium
       padding: 6.5rem 15px 0
 header
-  background: $color-off-white
-  padding: 5.8em 0 12.1em
+  padding: 5em 0 11.1em
   @include bp-medium
-    padding: 5.5em 0 13.2em
+    padding: 5.4em 0 12.2em
   @include bp-large
-    padding: 6.5em 0 13.5em
+    padding: 5.6em 0 12.4em
   @include bp-xlarge
-    padding: 7.1em 0 13.7em
-  background-image: url(img/bg-header-left.svg), url(img/bg-header-right.svg)
-  background-repeat: no-repeat, no-repeat
-  background-position: left 3rem, bottom right
-  // background: #292b35
-  // padding-top: 6.9em
-  // padding-bottom: 10.8em
+    padding: 5.9em 0 12.4em
+  background: #292c35
   // background-image: radial-gradient(132% 90% at top center,hsla(230, 18%, 21%, 1) 0,#16191e 98%),linear-gradient(-180deg,rgba(17, 44, 153, 0.48),rgba(17,44,153,0) 96%)
   &.header-home
-    text-align: center
+    text-align: left
     @include bp-small
       // padding-left: 1.5rem
   &.header-page
     text-align: left
     padding: 4em 0 2.8em
+    background: #292c35
     @include bp-medium
       padding: 10.5em 0 2.4em
     .info
@@ -366,19 +363,18 @@ header
   p
     margin-bottom: 0
     max-width: 695px
-    margin: 0 auto
+    color: #BBBBC1
     @include bp-medium
-      @include font-size(19.5px)
-    @include bp-large
-      @include font-size(21px)
+      @include font-size(22px)
     @include bp-xlarge
       font-size: 1.25em
   h1
+    color: #fff
     @include font-size(29px)
     @include bp-medium
       @include font-size(46px)
     @include bp-large
-      @include font-size(51px)
+      @include font-size(54px)
     @include bp-xlarge
       @include font-size(57px)
 .header-page
@@ -447,11 +443,11 @@ header
 section
   position: relative
   &.stats
+    background: #fff
     margin-top: -25vw
     @include bp-xlarge
       margin-top: -16em
-    background-image: linear-gradient(-180deg, $color-off-white 3%, $color-white 81%)
-    padding: 5rem 0 0
+    padding: 5rem 0 11.4rem
     div[class*='col-']
       display: flex
     h3
@@ -998,7 +994,7 @@ svg
       stroke: $color-white
 .user-type
   position: relative
-  margin-top: -11.5rem
+  margin-top: -10.1rem
   text-align: center
   p
     @include font-size(17.3px)
