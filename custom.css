@@ -451,10 +451,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #fff;
   font-weight: 700;
   font-size: 1.2rem;
-  border-radius: 6px;
+  border-radius: 5px;
   padding: 0.55rem 0.75rem;
   border: 0;
-  box-shadow: 0 4px 6px rgba(96, 129, 58, 0.09), 0 1px 3px rgba(0, 0, 0, 0.09);
+  box-shadow: 0 4px 6px rgba(96, 129, 58, 0.09), 0 1px 3px rgba(0, 0, 0, 0.09), 0px -3px 0px rgba(0, 0, 0, 0.05) inset;
   transition: all 0.25s ease; }
 @media only screen and (max-width: 576px) {
   .btn {
