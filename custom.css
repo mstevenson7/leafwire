@@ -364,6 +364,7 @@ form.main-form button.btn {
   form.main-form button.btn {
     width: 80%; } }
 form.main-form .progress {
+  height: 5px;
   max-width: 500px;
   margin: 0 auto 3.4em;
   border-radius: 100px;

@@ -64,46 +64,50 @@
     <div class="container offset">
       <div class="card pad-xl signup">
         <form class="main-form">
-          <h5>Step 4 of 5</h5>
-          <p class="lrg">What funding are you looking to raise?</p>
-          <p class="center sml">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, ipsam quidem velit reiciendis quas laudantium.
-          </p>
+          <h5>Step 2 of 3</h5>
+          <p class="lrg">Complete your profile</p>
           <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar" role="progressbar" style="width: 66%;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
           <div class="form-row">
-            <div class="col-md-6 mb-3">
-              <select class="custom-select custom-select-lg mb-3">
-                <option>Seed stage</option>
-                <option>A</option>
-                <option>B</option>
-                <option>C</option>
-              </select>
-              <label for="first-name">Current stage</label>
-            </div>
-            <div class="col-md-6 mb-3">
-              <input type="text" class="form-control" id="last-name" required>
-              <label for="last-name">Amount looking to raise</label>
+            <div class="col-md-12 mb-3">
+              <input type="text" class="form-control" id="company" placeholder="Leafwire, Inc." required>
+              <label for="email-address">Current company</label>
             </div>
           </div>
           <div class="form-row">
-            <div class="col-md-12 mb-4">
-              <h6 class="mb-3">Current personel</h6>
-              <p class="sml">We highly recommend that you have all your employees create a profile to enhance the probability you’ll be contacted by investors, and connect it to your company</p>
-              <a href="#" class="btn mb-3">+ Personnel</a>
+            <div class="col-md-12 mb-3">
+              <textarea class="form-control mr-sm-2 comment" type="text" placeholder="What's your resume elevator pitch?" id="experience"></textarea>
+              <label for="experience">Short overview of your professional experience</label>
             </div>
           </div>
-          <div class="form-row mb-3">
-            <div class="col-md-6 mb-3">
-              <input type="text" class="form-control" id="current-inv" placeholder="Current investors" required>
-              <label for="current-inv">Current investors</label>
-            </div>
-            <div class="col-md-6 mb-3">
-              <input type="text" class="form-control" id="current-am" placeholder="" required>
-              <label for="current-am">Current amount raised</label>
+          <div class="form-row">
+            <div class="col-md-12 mb-3">
+              <input type="text" class="form-control" id="education" placeholder="Stanford University" required>
+              <label for="education">Education</label>
             </div>
           </div>
-          <div class="row">
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <input type="text" class="form-control" id="twitter" placeholder="First name" required>
+              <label for="twitter">Twitter</label>
+            </div>
+            <div class="col-md-6 mb-3">
+              <input type="text" class="form-control" id="linkedin" placeholder="Last name" required>
+              <label for="linkedin">LinkedIn</label>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <input type="file" class="form-control-file" id="inputFileIMG" accept="image/*" onchange="readUrl(this)" data-title="&#x2b;&nbsp; Add image or drop here">
+              <label for="inputFileIMG">Profile photo</label>
+            </div>
+            <div class="col-md-6 mb-3">
+              <input type="file" class="form-control-file" id="inputFileVid" accept="image/*" onchange="readUrl(this)" data-title="&#x2b;&nbsp; Add video or drop here">
+              <label for="inputFileVid">Video</label>
+            </div>
+          </div>
+          <div class="row mt-4">
             <div class="col-sm-6">
               <button class="btn clr-line gray mb-3" type="button">Back</button>
             </div>
